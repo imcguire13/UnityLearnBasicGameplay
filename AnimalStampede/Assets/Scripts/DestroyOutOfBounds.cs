@@ -15,9 +15,11 @@ public class DestroyOutOfBounds : MonoBehaviour
     {
         if (transform.position.z > topBound)
         {
+            // destroys object and broadcasts message once the animal passes the player
             Destroy(gameObject);
         } else if(transform.position.z < lowerBound)
         {
+            Debug.Log("Game Over!");
             Destroy(gameObject);
 
         }
